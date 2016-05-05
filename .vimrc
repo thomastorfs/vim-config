@@ -112,11 +112,23 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 
+" Open new buffers in a new split 
+nmap <leader>sh :leftabove vnew<cr>
+nmap <leader>sl :rightbelow vnew<cr>
+nmap <leader>sk :leftabove new<cr>
+nmap <leader>sj :rightbelow new<cr>
+
+" Tab between buffers
+noremap <tab> <c-w><c-w>
+
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Format the entire file
+nmap <leader>fef ggVG=
 
 " -----------------------------------------------------------------------------
 " Plugin configuration and mappings
