@@ -22,6 +22,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-eunuch'
 " Plugin 'kana/vim-textobj-user'
 " Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
@@ -53,8 +54,8 @@ Plugin 'Valloric/YouCompleteMe'
 " Plugin 'elzr/vim-json'
 
 " Versioning
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'jisaacks/GitGutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Compatibility
 " Plugin 'christoomey/vim-tmux-navigator'
@@ -146,6 +147,9 @@ nmap <leader>bs :CtrlPBuffer<cr>
 let g:buffergator_viewport_split_policy = 'R' " Right side of the screen
 let g:buffergator_suppress_keymaps = 1 " Personal mappings
 nmap <leader>bl :BuffergatorOpen<cr>
+
+" Eunuch
+nmap <leader>bd :Remove<cr>
 
 " -----------------------------------------------------------------------------
 " Extra 
