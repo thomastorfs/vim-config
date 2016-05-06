@@ -108,9 +108,9 @@ imap jk <ESC>
 
 " Buffers
 nmap <leader>t :enew<cr>
-nmap <leader>l :bnext<CR>
-nmap <leader>h :bprevious<CR>
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>l :bnext<cr>
+nmap <leader>h :bprevious<cr>
+nmap <leader>bq :bp <BAR> bd #<cr>
 
 " Open new buffers in a new split 
 nmap <leader>sh :leftabove vnew<cr>
@@ -118,24 +118,25 @@ nmap <leader>sl :rightbelow vnew<cr>
 nmap <leader>sk :leftabove new<cr>
 nmap <leader>sj :rightbelow new<cr>
 
-" Tab between buffers
+" Tab between splits
 noremap <tab> <c-w><c-w>
 
 " Easier split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-h> <c-w><c-h>
 
-" Format the entire file
-nmap <leader>fef ggVG=
+" Indent and format the entire buffer
+nmap <leader>ib ggVG=
+nmap <leader>fb ggVGgq
 
 " -----------------------------------------------------------------------------
 " Plugin configuration and mappings
 " -----------------------------------------------------------------------------
 
 " NERDTRee
-map <leader>n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<cr>
 
 " UltiSnips
 " let g:UltiSnipsExpandTrigger="<leader>s"
@@ -162,6 +163,16 @@ nmap <leader>bl :BuffergatorOpen<cr>
 
 " Eunuch
 nmap <leader>bd :Remove<cr>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_signs = 1
 
 " -----------------------------------------------------------------------------
 " Extra 
