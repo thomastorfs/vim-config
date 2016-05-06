@@ -183,3 +183,9 @@ autocmd FileType php,python,javascript,html,scss,css,xml,markdown,yml autocmd Bu
 
 " HTML syntax highlighting
 au BufRead *.html set filetype=htmlm4
+
+" Store swap and backup files in subdirectories of the .vim directory
+silent !mkdir ~/.vim/backup > /dev/null 2>&1
+silent !mkdir ~/.vim/swp > /dev/null 2>&1
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
