@@ -24,7 +24,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-eunuch'
 " Plugin 'kana/vim-textobj-user'
-" Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets' " Snippets are separated from the engine
 " Plugin 'sjl/gundo.vim'
@@ -39,6 +39,7 @@ Plugin 'abra/vim-obsidian'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'Yggdroot/indentLine'
 
 " Code awareness
 Plugin 'scrooloose/syntastic'
@@ -118,9 +119,6 @@ nmap <leader>sl :rightbelow vnew<cr>
 nmap <leader>sk :leftabove new<cr>
 nmap <leader>sj :rightbelow new<cr>
 
-" Tab between splits
-noremap <tab> <c-w><c-w>
-
 " Easier split navigation
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
@@ -173,6 +171,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_enable_signs = 1
+
+" Indent line
+let g:indentLine_color_term = 239
+let g:indentLine_char = '┊'
 
 " -----------------------------------------------------------------------------
 " Extra 
