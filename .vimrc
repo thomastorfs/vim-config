@@ -107,6 +107,10 @@ let mapleader=","
 " Easy escape 
 imap jk <ESC>
 
+" Easier beginning/end of line on azerty
+nnoremap ù 0
+nnoremap $ µ
+
 " Buffers
 nmap <leader>t :enew<cr>
 nmap <leader>l :bnext<cr>
